@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<button id="get">get</button>
+	<button id="post">post</button>
+	<script>
+		$(function(){
+			$('#get').on('click',function(){
+				$.ajax({
+					method:'GET',
+					url:'http://localhost:3000/data',
+					data:{
+						id:'3'
+					},
+					success:function(res){
+						console.log(res)
+					}
+				})
+			})
+		})
+	</script>
+</body>
+</html>
