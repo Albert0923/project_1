@@ -1,0 +1,27 @@
+$(function(){
+			$('#get').on('click',function(){
+				$.ajax({
+					method:'GET',
+					url:'http://localhost:3000/data',
+					data:{
+						id:'3'
+					},
+					success:function(res){
+						console.log(res)
+					}
+				})
+			})
+			$('#post').on('click',function(){
+				$.ajax({
+					method:'POST',
+					url:'http://localhost:3000/data',
+					data:{
+						id:'011',
+						name:'地理图册'
+					},
+					success:function(res){
+						console.log(res)
+					}
+				})
+			})
+		})
